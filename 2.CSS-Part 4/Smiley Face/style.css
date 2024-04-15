@@ -1,0 +1,29 @@
+.main{
+    background-color: yellow;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.mouth{
+    height: 60px;
+    width: 150px;
+    background-color:rgb(252, 78, 107);
+    border-radius: 0 0 50px 50px;
+    position: absolute;
+    top: 170px;
+    left: 75px;
+}
+.leye,.reye{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(7, 7, 7);
+    display: inline-block;
+    position: absolute;
+    left: 75px;
+    top: 70px;
+}
+.reye{
+    left: 175px;
+}

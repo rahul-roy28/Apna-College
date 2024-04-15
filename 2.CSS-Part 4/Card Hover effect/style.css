@@ -1,0 +1,33 @@
+body{
+    background-color:black;
+}
+.box{
+    padding-top: 50px;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.card{
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgb(249, 3, 52);
+    transition: 1s;
+}
+img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.info{
+
+    color: white;
+    padding-left: 8px;
+}
+.card:hover{
+    box-shadow: 5px 5px 8px rgb(3, 249, 171);
+   
+}

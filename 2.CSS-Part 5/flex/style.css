@@ -1,0 +1,15 @@
+.box{
+    height: 300px;
+    width: 700px;
+    background-color: antiquewhite;
+    margin: 20px auto;
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+}
+.box div{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 1px solid white;
+}

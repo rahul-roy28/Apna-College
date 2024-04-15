@@ -1,0 +1,16 @@
+.main{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(175, 175, 224);
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
+    /* row-gap: 5px;
+    column-gap: 5px; */
+    grid-gap:5px 5px;
+}
+#num{
+    text-align: center;
+    border: 2px solid greenyellow;
+    background-color: blueviolet;
+}

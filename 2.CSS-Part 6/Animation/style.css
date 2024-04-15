@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.box{
+    height: 600px;
+    width: 600px;
+    background-color: black;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.main{
+    height: 300px;
+    width: 300px;
+    border: 5px solid brown;
+    background-color: aqua;
+    animation: all 2s ease-in 1s infinite alternate;
+}
+h1{
+    color: aqua;
+}
+@keyframes all{
+    0%{
+      background-color: aqua;
+      border-radius: 0%;
+      border: 5px solid brown;     
+    }
+    100%{
+       background-color: rgb(69, 69, 69);
+       border-radius: 50%;
+       border: 10px solid brown;  
+    }
+}
