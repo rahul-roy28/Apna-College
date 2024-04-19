@@ -12,7 +12,15 @@ body {
   width: 200px;
   padding: 1rem;
 }
-
+.green{
+  color: green;
+}
+.underline{
+  text-decoration: underline purple wavy;
+}
+.backgroundcolor{
+  background-color: aqua;
+}
 .boxLink {
   text-decoration: none;
 }
@@ -25,4 +33,4 @@ body {
 
 #description {
   background-color: antiquewhite;
-}
+} 
