@@ -20,10 +20,16 @@ but.addEventListener('click',function(){
  }) 
 });
 
-let de=document.querySelectorAll('.delete');
-for(dele of de){
- dele.addEventListener('click',function(){
-  let par=this.parentElement
+ul.addEventListener('click',function(event){
+ if(event.target.nodeName=='BUTTON'){
+  let par=event.target.parentElement;
   par.remove();
- })
-}
+ }
+})
+// let de=document.querySelectorAll('.delete');
+// for(dele of de){
+//  dele.addEventListener('click',function(){
+//   let par=this.parentElement
+//   par.remove();
+//  })
+// }
