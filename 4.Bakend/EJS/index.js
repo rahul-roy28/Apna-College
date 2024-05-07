@@ -5,7 +5,8 @@ const path = require("path"); //Host from parent folder
 let port = 3000;
 
 // app.use(express.static('public'))
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public/css")));
+app.use(express.static(path.join(__dirname, "public/js")));
 app.set("view engine", "ejs"); //Using EJS
 app.set("views", path.join(__dirname, "/views")); // Views directory (Host from parent folder)
 app.get("/", (req, res) => {
