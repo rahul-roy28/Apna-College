@@ -1,0 +1,28 @@
+body {
+  background-color: black;
+}
+h1 {
+  text-align: center;
+  color: aqua;
+}
+.posts {
+  background-color: rgb(31, 31, 31);
+}
+.username {
+  text-align: center;
+  color: rgb(0, 255, 72);
+}
+.content {
+  text-align: center;
+  color: rgb(189, 10, 108);
+}
+.new {
+  background-color: rgb(31, 31, 31);
+  font-size: 28px;
+  text-align: center;
+  color: azure;
+}
+a {
+  text-decoration: none;
+  color: azure;
+}
