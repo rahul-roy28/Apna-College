@@ -1,4 +1,6 @@
 body {
+  padding-bottom: 50px;
+  margin: 0;
   background-color: black;
 }
 h1 {
@@ -25,4 +27,7 @@ h1 {
 a {
   text-decoration: none;
   color: azure;
+}
+.view {
+  text-align: center;
 }
