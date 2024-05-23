@@ -14,7 +14,6 @@
 // demo()
 // console.log('Demo was executed');
 
-
 // // Visualizing Call Stack
 
 // function one(){
@@ -62,38 +61,38 @@
 //  console.log('Failure: Weak Connection.')
 // })
 
-function savetoDB(data){
- return new Promise((resolve,reject)=>{    //  Use Promise
-  let netconnection=Math.floor(Math.random()*10)+1;
-  if(netconnection>4){
-   resolve('Success: Data was saved');
-  }else{
-   reject('Weak Connection');
-  }
-
- })
+function savetoDB(data) {
+  return new Promise((resolve, reject) => {
+    //  Use Promise
+    let netconnection = Math.floor(Math.random() * 10) + 1;
+    if (netconnection > 4) {
+      resolve("Success: Data was saved");
+    } else {
+      reject("Weak Connection");
+    }
+  });
 }
-savetoDB('Apna College')
-.then((result)=>{
- console.log('Data 1 was saved') // Promise Chaining
- console.log("Result of promise :",result)
- return savetoDB('Rahul Roy')
-})
-.then((result)=>{
- console.log('Data 2 was saved') // Promise Chaining
- console.log("Result of promise :",result)
- return savetoDB('Puchki')
-})
-.then((result)=>{
- console.log('Data 3 was saved') // Promise Chaining
- console.log("Result of promise :",result)
- return savetoDB('Raj')
-})
-.then((result)=>{
- console.log('Data 4 was saved') // Promise Chaining
- console.log("Result of promise :",result)
-})
-.catch((error)=>{
- console.log('Proise Denied')
- console.log("Error of promise :",error)
-});
+savetoDB("Apna College")
+  .then((result) => {
+    console.log("Data 1 was saved"); // Promise Chaining
+    console.log("Result of promise :", result);
+    return savetoDB("Rahul Roy");
+  })
+  .then((result) => {
+    console.log("Data 2 was saved"); // Promise Chaining
+    console.log("Result of promise :", result);
+    return savetoDB("Puchki");
+  })
+  .then((result) => {
+    console.log("Data 3 was saved"); // Promise Chaining
+    console.log("Result of promise :", result);
+    return savetoDB("Raj");
+  })
+  .then((result) => {
+    console.log("Data 4 was saved"); // Promise Chaining
+    console.log("Result of promise :", result);
+  })
+  .catch((error) => {
+    console.log("Proise Denied");
+    console.log("Error of promise :", error);
+  });
