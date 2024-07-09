@@ -1,4 +1,5 @@
 public class Operators{
+ @SuppressWarnings("unused")
  public static void main(String args[]){
   //Arithmetic Operators
  int a=20;
@@ -19,7 +20,7 @@ public class Operators{
  System.out.println((c<=d)); 
  //Logical Operator
  System.out.println((3>2) && (6>5));
- System.out.println((3<2) && (6>5));
+ System.out.println((3<2) && (7>6));
  System.out.println((3<2) || (6>5));
  System.out.println((3<2) || (6<5));
  System.out.println(!(3>2));

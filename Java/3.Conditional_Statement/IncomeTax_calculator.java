@@ -14,5 +14,6 @@ public class IncomeTax_calculator{
    tax=(int)(income*0.3);
   }
   System.out.println("Your tax amount is ="+tax);
+  sc.close();
  }
 }

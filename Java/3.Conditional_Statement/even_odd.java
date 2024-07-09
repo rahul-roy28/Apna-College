@@ -9,5 +9,6 @@ public class even_odd{
   else{
    System.out.println("Given number is ODD");
   }
+  sc.close();
  }
 }

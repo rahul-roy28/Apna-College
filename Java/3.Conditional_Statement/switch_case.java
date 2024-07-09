@@ -12,5 +12,6 @@ public class switch_case{
     break;
    default:System.out.println("There is nothing");
   }
+  sc.close();
  }
 }

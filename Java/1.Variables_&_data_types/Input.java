@@ -11,6 +11,6 @@ public class Input{
 
   int a=sc.nextInt();//for int type data
   System.out.println(a);
-  
+  sc.close();
  }
 }

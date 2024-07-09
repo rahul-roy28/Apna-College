@@ -14,5 +14,6 @@ public class largest_of_3_numbers{
   else{
    System.out.println(c+" is the largest number.");
   }
+  sc.close();
  }
 }
