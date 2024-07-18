@@ -13,6 +13,6 @@ public class Solid_Rhombus {
   }
  }
  public static void main(String[] args) {
-  rhombus(9);
+  rhombus(6);
  }
 }
