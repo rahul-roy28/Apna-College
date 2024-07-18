@@ -7,9 +7,9 @@ public class Hollo_Rectangular {
     // cel=(i,j)
     if(i==1||i==row||j==1||j==col){
      // boundary condition
-     System.out.print("*"); 
+     System.out.print("* "); 
     }else{
-     System.out.print(" ");
+     System.out.print("  ");
     }
    }
    System.out.println();
