@@ -1,5 +1,5 @@
 public class max_subarray_sum {
-  public static void subarray_sum(int numbers[]) {
+  public static void brute_force(int numbers[]) {
    int currentSum=0;
    int maxSum=Integer.MIN_VALUE;
    for(int i=0;i<numbers.length;i++){
@@ -16,7 +16,7 @@ public class max_subarray_sum {
      }
     }
    }
-   System.out.println("Max Sum = "+maxSum); 
+   System.out.println("Brute Force Max Sum = "+maxSum); 
   }
   public static void Prefix_sum(int numbers[]) {
     int currentSum=0;
@@ -44,11 +44,34 @@ public class max_subarray_sum {
       }
      }
     }
-    System.out.println("Max Sum = "+maxSum); 
+    System.out.println("Prefix Sum: Max Sum = "+maxSum); 
    } 
-  public static void main(String[] args) {
-   int numbers[]={1,-2,6,-1,3};
-   subarray_sum(numbers);
+  public static void kadane(int numbers[]) {
+    int currentSum=0;
+    int maxSum=Integer.MIN_VALUE;
+    
+    // When all array elements are negetive
+    for(int j=0;j<numbers.length;j++){
+      if(numbers[j]<0){
+        maxSum=Math.max(maxSum, numbers[j]);
+      }
+    }
+    System.out.println("Special condition max Sum : "+maxSum);
+    
+    for(int i=0;i<numbers.length;i++){
+      currentSum +=numbers[i];
+      if(currentSum<0){
+        currentSum=0;
+      }
+      System.out.println(currentSum);
+      maxSum=Math.max(maxSum, currentSum);
+    }
+    System.out.println("Kadane Max Sum : "+maxSum);
+  }
+   public static void main(String[] args) {
+   int numbers[]={-2,-3,4,-1,-2,1,5,-3};
+   brute_force(numbers);
    Prefix_sum(numbers);
+   kadane(numbers);
   }
  } 
