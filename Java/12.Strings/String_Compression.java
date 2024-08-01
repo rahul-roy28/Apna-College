@@ -15,7 +15,7 @@ public class String_Compression {
   return newStr;
  }
  public static void main(String[] args) {
-  String str="aaabbbbcccccdddddd";
+  String str="aaabbbbcccccddddddeeeeeee";
   System.out.println(compression(str));
  }
 }
