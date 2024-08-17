@@ -17,7 +17,7 @@ public class classes_objects{
 
 class BankAccount{
   public String username;
-  private String password;
+  public String password;
   public void setPassword(String pass){
     password=pass;
   }
