@@ -2,7 +2,7 @@ public class polymorphism {
   public static void main(String[] args) {
     // Method Overloading
     Calculaor calc=new Calculaor();
-    System.out.println(calc.sum(3, 5));
+    System.out.println(calc.sum(7875, 456));
     System.out.println(calc.sum((float)1.5, (float)2.5));
     System.out.println(calc.sum(4, 6, 8));
     // Method Overriding
