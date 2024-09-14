@@ -1,0 +1,141 @@
+/* style.css */
+
+/* Global styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #4caf50;
+  margin: 20px 0;
+}
+
+/* Form button for New Chat */
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  font-size: 1em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Chat container */
+.chat {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #4caf50;
+  border-right: 6px solid #4caf50;
+}
+
+.chat p {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+/* Styling for 'From' and 'Received By' */
+.chat p:first-child {
+  font-weight: bold;
+  color: #555;
+}
+
+.chat p:last-child {
+  font-style: italic;
+  color: #888;
+  text-align: right;
+}
+
+/* Message box */
+.msg {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #e7f8e7;
+  border-radius: 5px;
+  border: 1px solid #c7e6c7;
+}
+
+.msg p {
+  font-size: 1.2em;
+  color: #333;
+  word-wrap: break-word;
+}
+
+/* Buttons for Edit and Delete inside the chat */
+.msg form {
+  display: inline-block;
+}
+
+.msg form button {
+  background-color: #ff9800;
+  font-size: 0.9em;
+  padding: 5px 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.msg form button:hover {
+  background-color: #fb8c00;
+}
+
+/* Special style for Delete button */
+.msg form:last-child button {
+  background-color: #f44336;
+}
+
+.msg form:last-child button:hover {
+  background-color: #e53935;
+}
+
+/* Time and date display */
+.chat hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 15px 0;
+}
+
+.chat p:nth-last-child(2) {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #444;
+  text-align: right;
+}
+
+.chat p:last-child {
+  font-size: 0.85em;
+  color: #888;
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .chat {
+    width: 95%;
+  }
+}
