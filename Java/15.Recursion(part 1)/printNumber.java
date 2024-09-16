@@ -39,6 +39,16 @@ public class printNumber {
     int sm=n + sum(n-1);
     return sm;
   }
+  // Print Nth Fibonacci number
+  public static int fib(int n) {
+    if(n==0 || n==1){
+      return n;
+    }
+    int fib1=fib(n-1);
+    int fib2=fib(n-2);
+    int fb=fib1+fib2;
+    return fb;
+  }
   public static void main(String[] args) {
     int n=5;
     printInc(n);
@@ -46,5 +56,7 @@ public class printNumber {
     printDec(n);
     System.out.println(fact(n));
     System.out.println(sum(n));
+    System.out.println(fib(n));
+
   }
 }
