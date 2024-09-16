@@ -30,11 +30,21 @@ public class printNumber {
     int fc=n* fact(n-1);
     return fc;
   }
+  // Print sum of first n natural numbers
+  public static int sum(int n) {
+    if(n==1){
+      return 1;
+    }
+    sum(n-1);
+    int sm=n + sum(n-1);
+    return sm;
+  }
   public static void main(String[] args) {
     int n=5;
     printInc(n);
     System.out.println();
     printDec(n);
     System.out.println(fact(n));
+    System.out.println(sum(n));
   }
 }
