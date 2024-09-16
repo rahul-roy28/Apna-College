@@ -21,10 +21,20 @@ public class printNumber {
     System.out.print(" "+n);
     
   }
+  // Find factorial of N
+  public static int fact(int n) {
+    if(n==0){
+      return 1;
+    }
+    fact(n-1);
+    int fc=n* fact(n-1);
+    return fc;
+  }
   public static void main(String[] args) {
-    int n=10;
+    int n=5;
     printInc(n);
     System.out.println();
     printDec(n);
+    System.out.println(fact(n));
   }
 }
