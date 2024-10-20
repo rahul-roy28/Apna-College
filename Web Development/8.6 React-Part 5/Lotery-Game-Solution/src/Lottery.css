@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ddf2fd;
+  margin: 0;
+  padding: 20px;
+}
+
+.lottery-container {
+  background-color: #9bbec8;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  color: #164863;
+}
+
+.generate-button {
+  background-color: #427d9d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.generate-button:hover {
+  background-color: #365f7c;
+}
+
+.ticket {
+  margin: 20px 0;
+  color: #164863;
+}
+
+.message {
+  font-size: 1.2em;
+  color: #164863;
+  margin-top: 10px;
+}
