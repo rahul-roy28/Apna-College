@@ -49,14 +49,26 @@ public class printNumber {
     int fb=fib1+fib2;
     return fb;
   }
+  // Check if a given array is sorted or not
+  public static boolean isSorted(int arr[], int i) {
+    if(i==arr.length-1){
+      return true;
+    }
+    if(arr[i]>arr[i+1]){
+      return false;
+    }
+    return isSorted(arr, i+1);
+  }
   public static void main(String[] args) {
-    int n=5;
-    printInc(n);
-    System.out.println();
-    printDec(n);
-    System.out.println(fact(n));
-    System.out.println(sum(n));
-    System.out.println(fib(n));
+    // int n=5;
+    int arr[]={1,2,9,4,5};
+    System.out.println(isSorted(arr, 0));
+    // printInc(n);
+    // System.out.println();
+    // printDec(n);
+    // System.out.println(fact(n));
+    // System.out.println(sum(n));
+    // System.out.println(fib(n));
 
   }
 }
