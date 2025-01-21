@@ -90,10 +90,23 @@ public class printNumber {
     return xn;
     // return x*power(x, n-1);
   }
+  // Print x^n(Optimized)
+  public static int optimizedPower(int x, int n) {
+    if(n==0){
+      return 1;
+    }
+    int halfPower=optimizedPower(x, n/2);
+    int halfPowerSq=halfPower*halfPower;
+    // n is odd
+    if(n%2!=0){
+      halfPowerSq=x*halfPowerSq;
+    }
+    return halfPowerSq;
+  }
   public static void main(String[] args) {
     // int n=5;
     int arr[]={1,2,9,4,2,5};
-    System.out.println(power( 2,10));
+    System.out.println(optimizedPower( 2,5));
     // printInc(n);
     // System.out.println();
     // printDec(n);
