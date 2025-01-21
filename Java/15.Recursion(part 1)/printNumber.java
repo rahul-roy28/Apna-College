@@ -60,7 +60,7 @@ public class printNumber {
     return isSorted(arr, i+1);
   }
   public static int first(int arr[],int i,int key) {
-    if(arr[i]==arr.length){
+    if(i==arr.length){
       return -1;
     }
     if(arr[i]==key){
