@@ -59,6 +59,7 @@ public class printNumber {
     }
     return isSorted(arr, i+1);
   }
+  // First occurence of an element in an array
   public static int first(int arr[],int i,int key) {
     if(i==arr.length){
       return -1;
@@ -68,10 +69,31 @@ public class printNumber {
     }
     return first(arr, i+1,key);
   }
+  //Last occurence of an element in an array
+  public static int last(int arr[],int i,int key) {
+    if(i==arr.length){
+      return -1;
+    }
+    int isFound=last(arr, i+1, key);
+    if(isFound==-1 && arr[i]==key){
+      return i;
+    }
+    return isFound;
+  }
+  // Print x^n
+  public static int power(int x,int n) {
+    if(n==0){
+      return 1;
+    }
+    int nm1=power(x, n-1);
+    int xn=x*nm1;
+    return xn;
+    // return x*power(x, n-1);
+  }
   public static void main(String[] args) {
     // int n=5;
-    int arr[]={1,2,9,4,5};
-    System.out.println(first(arr, 0, 7));
+    int arr[]={1,2,9,4,2,5};
+    System.out.println(power( 2,10));
     // printInc(n);
     // System.out.println();
     // printDec(n);
