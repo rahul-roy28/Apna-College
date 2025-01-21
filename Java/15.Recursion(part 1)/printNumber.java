@@ -59,10 +59,19 @@ public class printNumber {
     }
     return isSorted(arr, i+1);
   }
+  public static int first(int arr[],int i,int key) {
+    if(arr[i]==arr.length){
+      return -1;
+    }
+    if(arr[i]==key){
+      return i;
+    }
+    return first(arr, i+1,key);
+  }
   public static void main(String[] args) {
     // int n=5;
     int arr[]={1,2,9,4,5};
-    System.out.println(isSorted(arr, 0));
+    System.out.println(first(arr, 0, 7));
     // printInc(n);
     // System.out.println();
     // printDec(n);
