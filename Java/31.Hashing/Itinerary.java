@@ -1,7 +1,7 @@
 import java.util.*;
 public class Itinerary {
   public static String getStart(HashMap<String,String> hm){
-    HashMap<String, String> rhm=new HashMap<>();
+    HashMap<String, String> rhm= new HashMap<>();
     for(String key: hm.keySet()){
       rhm.put(hm.get(key), key);
     }
@@ -13,7 +13,7 @@ public class Itinerary {
     return null;
   }
   public static void main(String[] args) {
-    HashMap<String,String> hm=new HashMap<>();
+    HashMap<String,String> hm= new HashMap<>();
     hm.put("Chennai", "Bengaluru");
     hm.put("Mumbai", "Delhi");
     hm.put("Goa", "Chennai");
