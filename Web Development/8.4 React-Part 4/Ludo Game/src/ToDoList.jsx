@@ -1,88 +1,15 @@
-// import { useState } from "react";
-// import { v4 as uuidv4 } from "uuid";
-// import "./ToDoList.css";
-
-// export default function TodoList() {
-//   let [todos, setTodos] = useState([{ task: "Sample Task", id: uuidv4() }]);
-//   let [newTodo, setNewTodo] = useState("");
-//   let addNewTask = () => {
-//     setTodos((pervTodos) => {
-//       return [...pervTodos, { task: newTodo, id: uuidv4() }];
-//     });
-//     setNewTodo("");
-//   };
-//   let updateTodoValue = (event) => {
-//     setNewTodo(event.target.value);
-//   };
-//   let deleteTodo = (id) => {
-//     setTodos((prevTodos) => todos.filter((prevTodos) => prevTodos.id != id));
-//   };
-//   let toUppercase = () => {
-//     setTodos(
-//       todos.map((todo) => {
-//         return {
-//           ...todo,
-//           task: todo.task.toUpperCase(),
-//         };
-//       })
-//     );
-//   };
-//   let markAsDone = (id) => {
-//     setTodos(
-//       todos.map((todo) => {
-//         if (todo.id == id) {
-//           return {
-//             ...todo,
-//             task: todo.task.toUpperCase(),
-//           };
-//         } else {
-//           return todo;
-//         }
-//       })
-//     );
-//   };
-//   return (
-//     <div>
-//       <input
-//         type="text"
-//         placeholder="Add a Task"
-//         value={newTodo}
-//         onChange={updateTodoValue}
-//       ></input>
-//       <br />
-//       <br />
-//       <button onClick={addNewTask}>Add Task</button>
-//       <br />
-//       <br />
-//       <br />
-//       <hr />
-//       <h4>Tasks Todo</h4>
-//       <ul>
-//         {todos.map((todo) => (
-//           <li key={todo.id}>
-//             <span> {todo.task}</span>
-//             &nbsp;&nbsp;&nbsp;
-//             <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-//             &nbsp;&nbsp;&nbsp;
-//             <button onClick={() => markAsDone(todo.id)}>Mark as done</button>
-//           </li>
-//         ))}
-//       </ul>
-//       <br />
-//       <button onClick={toUppercase}>To Uppercase</button>
-//     </div>
-//   );
-// }
-
-import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./ToDoList.css"; // Import the CSS
 
 export default function TodoList() {
   let [todos, setTodos] = useState([
-    { task: "Sample Task", id: uuidv4(), completed: false },
+    // { task: "Sample Task", id: uuidv4(), completed: false },
   ]);
   let [newTodo, setNewTodo] = useState("");
+  const [quote, setQuote] = useState(""); // State to store the quote
 
   let addNewTask = () => {
     setTodos((prevTodos) => {
@@ -110,14 +37,40 @@ export default function TodoList() {
     );
   };
 
-  let markAsDone = (id) => {
+  // async function fetchQuote() {
+  //   const response = await fetch("https://dummyjson.com/quotes/random");
+  //   const jsonData = await response.json();
+  //   setQuote(jsonData.quote); // Set the fetched quote into state
+  // }
+  async function fetchQuote() {
+    try {
+      const response = await fetch("https://dummyjson.com/quotes/random");
+      const jsonData = await response.json();
+      setQuote(jsonData.quote); // Update state
+      toast.success(
+        <>
+          🎉 Congratulations!
+          <br />
+          You got this!
+        </>,
+        {
+          className: "custom-toast",
+        }
+      );
+    } catch (error) {
+      toast.error("Failed to fetch quote.");
+    }
+  }
+
+  const markAsDone = (id) => {
     setTodos(
       todos.map((todo) => {
         if (todo.id === id) {
-          return {
-            ...todo,
-            completed: !todo.completed, // Toggle the completed status
-          };
+          const updatedTodo = { ...todo, completed: !todo.completed };
+          if (updatedTodo.completed) {
+            fetchQuote(); // Show toast only when marking as done
+          }
+          return updatedTodo;
         } else {
           return todo;
         }
@@ -125,6 +78,7 @@ export default function TodoList() {
     );
   };
 
+  // Separate function to fetch and show motivational quote
   return (
     <div className="container">
       <h4>Tasks Todo</h4>
@@ -141,6 +95,11 @@ export default function TodoList() {
           Add Task
         </button>
       </div>
+      {quote && (
+        <div className="quote-box">
+          <p>"{quote}"</p>
+        </div>
+      )}
 
       <ul className="task-list">
         {todos.map((todo) => (
@@ -168,6 +127,17 @@ export default function TodoList() {
       <button onClick={markAllAsDone} className="mark-all-btn">
         Mark All as Done
       </button>
+
+      <ToastContainer
+        position="top-center"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }

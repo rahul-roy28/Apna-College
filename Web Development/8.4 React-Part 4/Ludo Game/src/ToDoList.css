@@ -142,3 +142,20 @@ h4 {
 .mark-all-btn:hover {
   background-color: #0056b3;
 }
+.custom-toast {
+  white-space: pre-wrap; /* Allows the quote to wrap if it's very long */
+  word-break: break-word; /* Prevents very long words from breaking the layout */
+  /* You can add other styling here, like max-width, etc. */
+}
+.quote-box {
+  background-color: #ffffff;
+  color: #333;
+  border: 2px solid #007bff;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-style: italic;
+  box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.2);
+  max-width: 90%;
+  text-align: center;
+}
